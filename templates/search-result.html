@@ -1,0 +1,7 @@
+<ul>
+  {% for station in stations %}
+  <li>
+    <a href="{{ format!("/dashboard/{}", station.id) }}">{{ station.name }}</a>
+  </li>
+  {% endfor %}
+</ul>

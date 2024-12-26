@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{%block title%} SNCF Dashboard {% endblock %}</title>
+    <script
+      src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.js"
+      integrity="sha384-oeUn82QNXPuVkGCkcrInrS1twIxKhkZiFfr2TdiuObZ3n3yIeMiqcRzkIcguaof1"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+      a {
+        color: white;
+      }
+      body {
+        font-family: Roboto, sans-serif;
+        background-color: rgb(0, 136, 206);
+        font-weight: 400;
+        color: white;
+        margin: 0;
+      }
+      * > {
+        margin: 0;
+      }
+
+      body {
+        display: grid;
+        grid-template-columns: 3rem [content-start] 1fr [content-end] 3rem;
+      }
+
+      body > * {
+        grid-column: content
+      }
+    </style>
+    {% block style %} {% endblock %}
+  </head>
+  <body>
+    {% block body%} {% endblock %}
+  </body>
+</html>

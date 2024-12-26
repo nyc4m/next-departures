@@ -1,0 +1,42 @@
+{% block style %}
+<style>
+label {
+  font-size: 3rem;
+}
+input[name="search"] {
+  border: none;
+  font-size: 3rem;
+  font-style: italic;
+  background-color: rgb(0, 6, 47);
+  color: white;
+  border-bottom: 2px solid white;
+  width: 100%;
+  &::placeholder {
+    color: white;
+  }
+}
+
+input + div {
+  font-size: 1.2rem;
+}
+
+</style>
+{% endblock %}
+{% extends "base.html" %}
+
+{% block body %}
+<h1>Prochains Départs</h1>
+<label for="search">Rechercher une Gare</label>
+<input
+  id="search"
+  name="search"
+  type="text"
+  placeholder="par ex: Dijon"
+  hx-post="/search"
+  hx-trigger="input delay:500ms"
+  hx-target="next div"
+  hx-swap="innerHTML"
+/>
+<div></div>
+
+{% endblock %}

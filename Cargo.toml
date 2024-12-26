@@ -1,0 +1,21 @@
+[package]
+name = "sncf-board"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.95"
+askama = { version = "0.12.1", features = ["with-axum"] }
+askama_axum = "0.4.0"
+axum = { version = "0.7.9", features = ["macros"] }
+chrono = "0.4.39"
+config = { version = "0.14", features = ["toml"] }
+iso8601 = "0.6.1"
+reqwest = { version = "0.12.9", features = ["json"] }
+serde = { version = "1.0.216", features = ["derive"] }
+serde_json = "1.0.134"
+thiserror = "2.0.9"
+tokio = { version = "1.42.0", features = ["full"] }
+tower-http = { version = "0.6.2", features = ["trace"] }
+tracing = { version = "0.1.41", features = ["attributes"] }
+tracing-subscriber = { version = "0.3.19", features = ["fmt", "std"] }
